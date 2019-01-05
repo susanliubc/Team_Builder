@@ -1,2 +1,2 @@
 # team
-Team management tool build with Meteor.js and React
+Team management web application build with Meteor.js and React
