@@ -87,6 +87,12 @@ class Login extends Component {
                                             </div>
                                         </div>
                                     </form>
+
+                                    <div className="google-box">
+                                        <div className="col-xs-12 col-sm-8 col-md-6">
+                                            <button className="btn btn-block btn-success" onClick={this.handleClick}>Google Login</button>
+                                        </div>
+                                    </div>
                     
                                 </div>
                             </div>

@@ -115,11 +115,7 @@ class Personal extends Component {
                                         </div>
                                     </form>
                                     
-                                    <div className="google-box">
-                                        <div className="col-xs-12 col-sm-8 col-md-6">
-                                            <button className="btn btn-block btn-success" onClick={this.handleClick}>Google Login</button>
-                                        </div>
-                                    </div>
+                                    
                                     <Container>
                                         <Card.Group>
                                             {this.props.teams.map((team, index) => <Team key={index} team={team} />)}
