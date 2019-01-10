@@ -6,7 +6,7 @@ class Logout extends Component {
         Meteor.logout();
         return (
             <div className="container">
-                <h3>You are signed out</h3>
+                <h3 style={{textAlign:'center'}}>You are signed out</h3>
             </div>
         )
     }
