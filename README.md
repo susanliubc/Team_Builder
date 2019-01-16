@@ -31,4 +31,6 @@ The changllening part is the application of assigned html template to Meteor/Rea
 
 Implement restricted Navbar routing. I had done the restricting routing in the App.js, will do it in the Navbar level.
 
+Add documentations.
+
 Also will take a look at semantic ui displaying.
