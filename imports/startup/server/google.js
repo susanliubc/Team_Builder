@@ -1,7 +1,9 @@
 import { Meteor } from 'meteor/meteor';
 import { ServiceConfiguration } from 'meteor/service-configuration';
 
-Meteor.startup(() => {
+const settings = Meteor.settings.google;
+
+if (settings) {
    ServiceConfiguration.configurations.remove({
         service: "google"
       });
@@ -10,9 +12,9 @@ Meteor.startup(() => {
     { service: 'google'},
     {
         $set: {
-            clientId: Meteor.settings.private.google.clientId,
+            clientId: settings.clientId,
             loginStyle: 'popup',
-            secret: Meteor.settings.private.google.secret
+            secret: settings.secret
         }
     });
-});
+};
