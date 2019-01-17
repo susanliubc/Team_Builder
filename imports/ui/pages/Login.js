@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
 import { Meteor } from 'meteor/meteor';
+import '../assets/css/bootstrap.min.css';
+import '../assets/css/oneui.css';
 
 class Login extends Component {
     state = {
