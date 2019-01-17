@@ -42,30 +42,8 @@ class Personal extends Component {
             Bert.alert({ type: 'success', message: 'Add succeed'});
         }
     };
-    handleClick = () => {
-        const errors = {
-            'no-hd': 'This Google account is not a G Suite account, please try another account ',
-            'duplicated-email': "Can't create an account because the email is already in use, please try another account ",
-            default: 'An error occurred while attempting to log in or try again later'
-        };
-          
-        const onLoginWithGoogle = ({token, isLogIn}) => {
-            const {scope} = ServiceConfiguration.configurations.findOne({service: 'google'});
-          
-            Meteor.loginWithGoogle(
-              {requestPermissions: scope, requestOfflineToken: true, loginUrlParameters: {hd: '*'}},
-              error => {
-                if (error) {
-                  if (error.errorType === 'Accounts.LoginCancelledError') return;
-                  const message = errors[error.error] || errors.default;
-                  alert('Login error', message);
-                } else if (token && !isLogIn) {
-                  acceptInviteMethod.call({token});
-                }
-              }
-            );
-          };      
-    }
+    
+    
     render() {
         return (
             <div className="container">
