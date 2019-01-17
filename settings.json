@@ -1,0 +1,8 @@
+/* Team/settings.json */
+
+{ 
+    "google": {
+        "clientId": "YOUR_PROJECT_CLIENT_ID",
+        "secret": "YOUR_PROJECT_SECRET"
+    }
+}
