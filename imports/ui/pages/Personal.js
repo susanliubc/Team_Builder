@@ -15,14 +15,7 @@ class Personal extends Component {
         lastName: '',
         email: ''
     }; 
-    /*componentDidMount(){
-        console.log(Meteor.user());
-        if(Meteor.user()){
-            this.setState({
-                email: Meteor.user().services.google.email
-            });
-        }
-    }; */
+
     handleChange = (e) => {
         this.setState({
             [e.target.name]: e.target.value
