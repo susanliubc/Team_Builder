@@ -5,9 +5,10 @@ Front end: React, Bootstrap, Semantic UI
 
 Database: mongoDB(mLab)
 
-Backend(server and authentication): Meteor Accounts-base Accounts-password OAuth Google
+Backend(server and authentication): Meteor Accounts-base Accounts-password Accounts-Google
+(OAuth login)
 
-Routing: React-router
+Routing: React-router v4
 
 1. General flow of how to use app
 
