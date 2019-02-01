@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route, Switch, BrowserRouter, Redirect } from 'react-router-dom';
-import Navbar from './layouts/Navbar.js';
+import NavbarContainer from './layouts/Navbar.js';
 import Home from './pages/Home.js';
 import Register from './pages/Register.js';
 import Login from './pages/Login.js';
@@ -14,7 +14,7 @@ const App = () => {
         <BrowserRouter>
             <div className="App">
                 <div className="header">
-                    <Navbar />
+                    <NavbarContainer />
                 </div>
                 <Switch>
                     <Route exact path='/' component={Home} />
