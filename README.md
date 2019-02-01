@@ -5,13 +5,22 @@ Front end: React, Bootstrap, Semantic UI
 
 Database: mongoDB(mLab)
 
-Backend(server and authentication): Meteor Accounts-base Accounts-password OAuth Google
+Backend(server and authentication): Meteor Accounts-base Accounts-password Accounts-Google
+(OAuth login)
 
-Routing: React-router
+Routing: React-router v4
 
 1. General flow of how to use app
 
-Go to Register page -> Input username/email/password submit -> Go to Login page -> Input username/password submit or login with google -> Go to Personal page -> Input firstname/lastname/email submit -> your teams will show up -> Go to Teams page -> Select firstname/lastname in the dropdown box -> Input the name information in the searchbox -> Information will show up below -> Input the teamname/membername submit -> a list of teams will show up
+Register page: Input username/email/password -> Submit
+
+Login page: Input username/password -> Submit or Login with google
+
+Personal page: Input firstname/lastname/email -> Submit
+
+Teams page: Select firstname/lastname in the dropdown box -> Input the name information in the searchbox -> Information will show up below -> Input the teamname/membername submit -> A list of teams will show up
+
+Personal page: Your team will show up
 
 2. How do you structure the data?
 
