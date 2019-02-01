@@ -9,7 +9,7 @@ class Login extends Component {
         username: '',
         password: '',
         error: '',
-        redirectToReferrer: false
+        redirect: false
     };
     handleChange = (e) => {
         this.setState({
@@ -20,11 +20,11 @@ class Login extends Component {
         e.preventDefault();
         const { username, password } = this.state;
         console.log('state: ', this.state);
-        Meteor.loginWithPassword({ username, password }, (err) => {
+        Meteor.loginWithPassword(username, password, (err) => {
             if(err) {
                 this.setState({ error: err.reason })
             } else {
-                this.setState({ error: '', redirectToReferer: true })
+                this.setState({ error: '', redirect: true })
             }
         });
         console.log('error: ', this.state.error);
@@ -54,7 +54,7 @@ class Login extends Component {
         } 
     };
     render() {
-        if(this.state.redirectToReferer) {
+        if(this.state.redirect) {
             return <Redirect to='/personal' />
         }
         return (
