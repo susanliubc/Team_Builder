@@ -34,14 +34,10 @@ const App = () => {
  * @param {any} { component: Component, ...rest }
  */
 const ProtectedRoute = ({ component: Component, ...rest }) => (
-    <Route
-        {...rest}
-        render={(props) => {
-          const isLogged = Meteor.userId() !== null;
-          return isLogged ?
-              (<Component {...props} />) :
-              (<Redirect to={{ pathname: '/login' }}/>
-              );
+    <Route {...rest} render={(props) => {
+        return Meteor.userId() !== null ?
+            <Component {...props} /> :
+            <Redirect to='/login' />
         }}
     />
 );
